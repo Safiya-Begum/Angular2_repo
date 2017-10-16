@@ -1,0 +1,9 @@
+<div>
+    <span>Gender based count</span>
+    <input type="radio" value='all' name='options' [(ngModel)]='selectedGender' (change)='raiseCustomEvent()'/>
+    <span>{{'All('+all+')'}}</span>
+    <input type="radio" value='male' name='options' [(ngModel)]='selectedGender' (change)='raiseCustomEvent()'/>
+    <span>{{'Male('+male+')'}}</span>
+    <input type="radio" value='female' name='options' [(ngModel)]='selectedGender' (change)='raiseCustomEvent()'/>
+    <span>{{'Female('+female+')'}}</span>
+</div>

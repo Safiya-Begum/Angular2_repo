@@ -1,0 +1,35 @@
+<table *ngIf="employee" class="table table-striped table-bordered table-hover">
+    <tr>
+        <td>Emp ID</td>
+        <td>{{employee.empId}}</td>
+    </tr>
+    <tr>
+        <td>Name</td>
+        <td>{{employee.name}}</td>
+    </tr>
+    <tr>
+        <td>Gender</td>
+        <td>{{employee.gender}}</td>
+    </tr>
+    <tr>
+        <td>Salary</td>
+        <td>{{employee.salary}}</td>
+    </tr>
+    <tr>
+        <td>Doj</td>
+        <td>{{employee.doj}}</td>
+    </tr>
+</table>
+<div *ngIf="!employee">
+    {{statusMessage}}
+</div>
+<br/>
+<br/>
+<div>
+    <button class="btn btn-primary" (click)="backToEmployeesList()" value="Back to Employees List">Back to Employees List</button>
+</div>
+<br/>
+<br/>
+<div>
+     <button *ngIf="!subscription.closed" class="btn btn-primary" (click)="cancelRequest()" value="Cancel Request">Cancel Request</button>
+</div>
